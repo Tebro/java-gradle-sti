@@ -10,3 +10,7 @@ RUN yum clean all
 
 COPY ["run", "assemble", "/usr/libexec/s2i/"]
 RUN chmod +x /usr/libexec/s2i/*
+
+RUN chmod -R 777 /opt
+
+USER 1001
